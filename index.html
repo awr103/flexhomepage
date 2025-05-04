@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex English - Language Learning Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-social">
+                <div class="logo">
+                    <img src="images/flex1.png" alt="Flex Logo 1" class="header-logo-img">
+                    <img src="images/flex2.png" alt="Flex Logo 2" class="header-logo-img">
+                </div>
+                <div class="header-social-links">
+                    <a href="https://www.facebook.com/FlexEnglishCenter/photos" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@flex.english.cent" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                    </button>
+                    <button class="lang-btn" data-lang="vi">
+                        <img src="https://flagcdn.com/w20/vn.png" alt="Vietnamese">
+                    </button>
+                </div>
+                <ul>
+                    <li><a href="#about" data-i18n="nav.about">About Us</a></li>
+                    <li><a href="#teachers" data-i18n="nav.teachers">Our Teachers</a></li>
+                    <li><a href="classes.html" data-i18n="nav.classes">Our Classes</a></li>
+                    <li><a href="news.html" data-i18n="nav.news">News</a></li>
+                    <li><a href="https://ptai-puce.vercel.app/" class="cta-button" data-i18n="nav.test" target="_blank" rel="noopener">Take English Test</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-flex">
+                <div class="hero-text">
+                    <h1 data-i18n="hero.title">Welcome to Flex English</h1>
+                    <p data-i18n="hero.subtitle">Your journey to English fluency starts here</p>
+                    <div class="hero-tagline" data-i18n="hero.tagline">✅ Free. Fast. Accurate. AI-powered.</div>
+                    <a href="https://ptai-puce.vercel.app/" class="cta-button hero-cta" data-i18n="hero.cta" target="_blank" rel="noopener">Find Your English Level in 5 Minutes</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/student.png" alt="Student on laptop" />
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-carousel">
+                <button class="carousel-arrow left" aria-label="Previous">&#8592;</button>
+                <div class="carousel-track">
+                    <div class="carousel-slide active">
+                        <h2 data-i18n="about.title">About Our Center</h2>
+                        <div class="about-content">
+                            <div class="about-image">
+                                <img src="images/about-center.jpg" alt="Flex English Center">
+                            </div>
+                            <div class="about-text">
+                                <p data-i18n="about.text1">At Flex English, we're dedicated to helping you achieve your language learning goals. Our innovative approach combines traditional teaching methods with modern technology to create an engaging and effective learning environment.</p>
+                                <p data-i18n="about.text2">Whether you're a beginner or looking to perfect your English skills, our experienced teachers and comprehensive programs are designed to meet your needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <h2 data-i18n="about.philosophy.title">Our Philosophy</h2>
+                        <div class="about-content">
+                            <div class="about-image">
+                                <img src="images/flex.jpg" alt="Philosophy">
+                            </div>
+                            <div class="about-text">
+                                <p data-i18n="about.philosophy.text">At Flex, our philosophy is all about building confidence. Many students are afraid to speak English, so we create an environment where students feel comfortable, have fun, and are free to make mistakes. We want every student to feel confident so they can truly flex their English!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <h2>Curriculum</h2>
+                        <div class="about-content">
+                            <div class="about-image">
+                                <img src="images/books.jpg" alt="Curriculum" class="curriculum-image">
+                            </div>
+                            <div class="about-text">
+                                <p>We use the Cambridge curriculum, which is internationally recognized and accredited. Our engaging content links seamlessly with the Cambridge One online platform for homework. Flex English is an accredited Cambridge Center.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-arrow right" aria-label="Next">&#8594;</button>
+            </div>
+        </section>
+
+        <section id="teachers">
+            <h2 data-i18n="teachers.title">Our Teachers</h2>
+            <div class="teachers-grid">
+                <div class="teacher-card">
+                    <div class="teacher-image">
+                        <img src="images/alexander-reiger.jpg" alt="Alexander Reiger">
+                    </div>
+                    <h3 data-i18n="teachers.teacher1.name">Alexander Rieger</h3>
+                    <p data-i18n="teachers.teacher1.qualifications">TESOL certificate, 10 years experience teaching in Vietnam, fun and engaging lessons, and a co-founder of Flex English Center.</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-image">
+                        <img src="images/quan-le.jpg" alt="Quan Le">
+                    </div>
+                    <h3 data-i18n="teachers.teacher2.name">Quan Le</h3>
+                    <p data-i18n="teachers.teacher2.qualifications">Co-founder, Vietnamese teaching certificate, studied in America, specializes in IELTS, IELTS 8.0, excellent at academic teaching and writing.</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-image">
+                        <img src="images/liam-fleming.png" alt="Liam Fleming">
+                    </div>
+                    <h3 data-i18n="teachers.teacher3.name">Liam Fleming</h3>
+                    <p data-i18n="teachers.teacher3.qualifications">Experienced teacher from the United Kingdom, TESOL certificate, 10 years experience, specializes in young children.</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-image">
+                        <img src="images/david.jpg" alt="David">
+                    </div>
+                    <h3 data-i18n="teachers.teacher4.name">David</h3>
+                    <p data-i18n="teachers.teacher4.qualifications">Experienced teacher with teenagers. Holds a bachelor's degree in education.</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-image">
+                        <img src="images/chau.jpg" alt="Chau">
+                    </div>
+                    <h3 data-i18n="teachers.teacher5.name">Chau</h3>
+                    <p data-i18n="teachers.teacher5.qualifications">Bachelor's degree in education. IELTS 7.0. Specializes in teenagers and adults.</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-image">
+                        <img src="images/joyce.jpg" alt="Joyce">
+                    </div>
+                    <h3 data-i18n="teachers.teacher6.name">Joyce (TA)</h3>
+                    <p data-i18n="teachers.teacher6.qualifications">Teaching Assistant. Helps teachers in class, supports students, and communicates with parents.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="test">
+            <div class="test-flex">
+                <div class="test-image-left">
+                    <img src="images/aipic.png" alt="AI Illustration" />
+                </div>
+                <div class="test-center-content">
+                    <h2 data-i18n="test.title">Take Our English Test</h2>
+                    <p data-i18n="test.description">Discover your current English level with our AI-powered assessment</p>
+                </div>
+                <div class="test-image-right">
+                    <img src="images/computer.JPG" alt="Computer Pointing" class="computer-img" />
+                    <a href="https://ptai-puce.vercel.app/" class="cta-button pulsate" data-i18n="test.button" target="_blank" rel="noopener" id="test-btn-overlay">Start Test Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content new-footer-layout">
+            <div class="footer-section contact-section">
+                <h3 data-i18n="footer.contact">Contact Us</h3>
+                <p>Email: <a href="mailto:thuy.le@flexenglish.edu.vn">thuy.le@flexenglish.edu.vn</a></p>
+                <p>Phone: 0703.010122</p>
+                <p>Address: D8 Đ. Mậu Thân, An Phú, Ninh Kiều, Cần Thơ 902072</p>
+            </div>
+            <div class="footer-section map-section">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.782904774211!2d105.7726526!3d10.034765499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0893b0ca8aa03%3A0x7f6ca6a145cf2f80!2sFlex%20English%20Center!5e0!3m2!1sen!2s!4v1746269482740!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer-section photo-section">
+                <img src="images/center.jpg" alt="Flex English Center" class="footer-center-photo" />
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="footer.follow">Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FlexEnglishCenter/photos" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@flex.english.cent" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Flex English. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="carousel.js"></script>
+</body>
+</html> 

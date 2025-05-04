@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Flex English Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .news-container {
+            max-width: 900px;
+            margin: 5rem auto 3rem auto;
+            padding: 0 1.5rem;
+        }
+        .news-title {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.5px;
+        }
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+        .news-card {
+            display: flex;
+            flex-direction: row;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(44,62,80,0.08);
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+            min-height: 180px;
+        }
+        .news-card:hover {
+            box-shadow: 0 8px 32px rgba(44,62,80,0.13);
+        }
+        .news-image {
+            flex: 0 0 200px;
+            height: 180px;
+            background: #eaf6fb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+        }
+        .news-content {
+            flex: 1 1 0;
+            padding: 1.5rem 2rem 1.5rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .news-headline {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 0.7rem;
+        }
+        .news-date {
+            font-size: 0.98rem;
+            color: #888;
+            margin-bottom: 0.7rem;
+        }
+        .news-desc {
+            font-size: 1.08rem;
+            color: #444;
+        }
+        @media (max-width: 700px) {
+            .news-card { flex-direction: column; min-height: unset; }
+            .news-image { width: 100%; height: 160px; }
+            .news-content { padding: 1.2rem 1rem; }
+        }
+        .read-more-btn {
+            display: block;
+            margin: 1.2rem auto 0 auto;
+            padding: 0.5rem 1.5rem;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 7px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.25s, transform 0.25s;
+        }
+        .news-card:hover .read-more-btn {
+            opacity: 1;
+            transform: translateY(0);
+            display: block;
+        }
+        .news-content {
+            position: relative;
+        }
+        .news-card.expanded {
+            box-shadow: 0 8px 32px rgba(44,62,80,0.13);
+            background: #f8f9fa;
+        }
+        .news-card .news-desc.full {
+            display: none;
+            margin-top: 1rem;
+            color: #333;
+        }
+        .news-card.expanded .news-desc.short {
+            display: none;
+        }
+        .news-card.expanded .news-desc.full {
+            display: block;
+        }
+        .news-card.expanded .read-more-btn {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-social">
+                <div class="logo">
+                    <a href="index.html"><img src="images/flex1.png" alt="Flex Logo 1" class="header-logo-img"></a>
+                    <a href="index.html"><img src="images/flex2.png" alt="Flex Logo 2" class="header-logo-img"></a>
+                </div>
+                <div class="header-social-links">
+                    <a href="https://www.facebook.com/FlexEnglishCenter/photos" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@flex.english.cent" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                    </button>
+                    <button class="lang-btn" data-lang="vi">
+                        <img src="https://flagcdn.com/w20/vn.png" alt="Vietnamese">
+                    </button>
+                </div>
+                <ul>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#teachers">Our Teachers</a></li>
+                    <li><a href="classes.html">Our Classes</a></li>
+                    <li><a href="news.html" style="font-weight:700;color:#3498db;">News</a></li>
+                    <li><a href="https://ptai-puce.vercel.app/" class="cta-button" target="_blank" rel="noopener">Take English Test</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="news-container" style="margin-top: 6.5rem;">
+            <div class="news-title">Latest News</div>
+            <div class="news-list">
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="News Story 1">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-headline">Flex English Launches New AI English Test</div>
+                        <div class="news-date">May 2024</div>
+                        <div class="news-desc short">We're excited to announce the launch of our new AI-powered English placement test. Discover your level in minutes and get personalized recommendations for your learning journey!</div>
+                        <div class="news-desc full">
+                            We're excited to announce the launch of our new AI-powered English placement test. Discover your level in minutes and get personalized recommendations for your learning journey!<br><br>
+                            With advanced AI, our test adapts to your answers and provides instant feedback. Start your journey with Flex English today and see how far you can go!<br><br>
+                            Our new test is designed for all ages and levels, from young learners to adults. The assessment covers grammar, vocabulary, reading, and listening skills, and provides a detailed report at the end. You can take the test from any device, at any time, and receive instant results.<br><br>
+                            Why choose Flex English's AI test? Our technology ensures accuracy and fairness, and our team of experienced teachers is ready to help you interpret your results and plan your next steps. Whether you're preparing for an exam, looking to improve your communication skills, or just curious about your English level, our test is the perfect starting point.<br><br>
+                            Sign up today and experience the future of English assessment. At Flex English, we're committed to helping you achieve your goals with innovative tools and personalized support. Join our community and take the first step toward English fluency!
+                            <button class="show-less-btn" style="margin-top:1.2rem;display:block;">Show Less</button>
+                        </div>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="News Story 2">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-headline">Summer English Camp Registration Now Open</div>
+                        <div class="news-date">April 2024</div>
+                        <div class="news-desc short">Join our immersive Summer English Camp for kids and teens! Fun activities, native teachers, and a chance to make new friends while improving your English skills.</div>
+                        <div class="news-desc full">
+                            Join our immersive Summer English Camp for kids and teens! Fun activities, native teachers, and a chance to make new friends while improving your English skills.<br><br>
+                            Our camp includes daily English workshops, outdoor games, and creative projects designed to build confidence and fluency. Students will participate in team challenges, talent shows, and field trips to local attractions. Every day is packed with opportunities to practice English in real-life situations.<br><br>
+                            Our experienced teachers use interactive methods to keep students engaged and motivated. Campers will work on speaking, listening, reading, and writing, with plenty of time for fun and friendship. Parents receive regular updates and a final report on their child's progress.<br><br>
+                            Spaces are limited to ensure a personalized experience for every student. Early registration is recommended. Whether your child is a beginner or already speaks some English, our camp is the perfect place to learn, grow, and make lasting memories.<br><br>
+                            Register now to reserve your spot for an unforgettable summer! For more information, contact us at thuy.le@flexenglish.edu.vn or call 0703.010122. We can't wait to welcome you to Flex English Summer Camp!
+                            <button class="show-less-btn" style="margin-top:1.2rem;display:block;">Show Less</button>
+                        </div>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content new-footer-layout">
+            <div class="footer-section contact-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:thuy.le@flexenglish.edu.vn">thuy.le@flexenglish.edu.vn</a></p>
+                <p>Phone: 0703.010122</p>
+                <p>Address: D8 Đ. Mậu Thân, An Phú, Ninh Kiều, Cần Thơ 902072</p>
+            </div>
+            <div class="footer-section map-section">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.782904774211!2d105.7726526!3d10.034765499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0893b0ca8aa03%3A0x7f6ca6a145cf2f80!2sFlex%20English%20Center!5e0!3m2!1sen!2s!4v1746269482740!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer-section photo-section">
+                <img src="images/center.jpg" alt="Flex English Center" class="footer-center-photo" />
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FlexEnglishCenter/photos" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@flex.english.cent" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Flex English. <span>All rights reserved.</span></p>
+        </div>
+    </footer>
+    <script>
+    document.querySelectorAll('.news-card').forEach(card => {
+        const btn = card.querySelector('.read-more-btn');
+        const lessBtn = card.querySelector('.show-less-btn');
+        btn.addEventListener('click', () => {
+            card.classList.add('expanded');
+        });
+        card.addEventListener('click', function(e) {
+            if (e.target.classList.contains('show-less-btn')) {
+                card.classList.remove('expanded');
+            }
+        });
+    });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Classes - Flex English</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-social">
+                <div class="logo">
+                    <a href="index.html"><img src="images/flex1.png" alt="Flex Logo 1" class="header-logo-img"></a>
+                    <a href="index.html"><img src="images/flex2.png" alt="Flex Logo 2" class="header-logo-img"></a>
+                </div>
+                <div class="header-social-links">
+                    <a href="https://www.facebook.com/FlexEnglishCenter/photos" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@flex.english.cent" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                    </button>
+                    <button class="lang-btn" data-lang="vi">
+                        <img src="https://flagcdn.com/w20/vn.png" alt="Vietnamese">
+                    </button>
+                </div>
+                <ul>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#teachers">Our Teachers</a></li>
+                    <li><a href="classes.html">Our Classes</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="https://ptai-puce.vercel.app/" class="cta-button" target="_blank" rel="noopener">Take English Test</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="classes">
+            <h2 data-i18n="classes.title">Our Classes</h2>
+            <div class="classes-grid">
+                <div class="class-card">
+                    <img class="class-logo" src="images/first-flight.png" alt="First Flight">
+                    <div class="class-title" data-i18n="classes.class1.title">First Flight (Ages 3–5)</div>
+                    <button class="join-class-btn" data-class="First Flight (Ages 3–5)" data-i18n="classes.join">Join Class</button>
+                </div>
+                <div class="class-card">
+                    <img class="class-logo" src="images/power-up.png" alt="Power Up">
+                    <div class="class-title" data-i18n="classes.class2.title">Power Up (Ages 6–12)</div>
+                    <button class="join-class-btn" data-class="Power Up (Ages 6–12)" data-i18n="classes.join">Join Class</button>
+                </div>
+                <div class="class-card">
+                    <img class="class-logo" src="images/teens.png" alt="Teens">
+                    <div class="class-title" data-i18n="classes.class3.title">Teens</div>
+                    <button class="join-class-btn" data-class="Teens" data-i18n="classes.join">Join Class</button>
+                </div>
+                <div class="class-card">
+                    <img class="class-logo" src="images/ielts.png" alt="IELTS">
+                    <div class="class-title" data-i18n="classes.class4.title">IELTS</div>
+                    <button class="join-class-btn" data-class="IELTS" data-i18n="classes.join">Join Class</button>
+                </div>
+                <div class="class-card">
+                    <img class="class-logo" src="images/adults.png" alt="Adults">
+                    <div class="class-title" data-i18n="classes.class5.title">Adults</div>
+                    <button class="join-class-btn" data-class="Adults" data-i18n="classes.join">Join Class</button>
+                </div>
+                <div class="class-card">
+                    <img class="class-logo" src="images/communication.png" alt="Communication">
+                    <div class="class-title" data-i18n="classes.class6.title">Communication</div>
+                    <button class="join-class-btn" data-class="Communication" data-i18n="classes.join">Join Class</button>
+                </div>
+                <div class="class-card">
+                    <img class="class-logo" src="images/business.png" alt="Business English">
+                    <div class="class-title" data-i18n="classes.class7.title">Business English</div>
+                    <button class="join-class-btn" data-class="Business English" data-i18n="classes.join">Join Class</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="join-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 data-i18n="modal.title">Join Class</h2>
+            <form id="join-class-form">
+                <input type="hidden" name="class" id="class-input">
+                <label for="class-name">Class:</label>
+                <input type="text" id="class-name" name="class-name" readonly>
+                <label for="name" data-i18n="modal.name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email" data-i18n="modal.email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone" data-i18n="modal.phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <button type="submit" data-i18n="modal.submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div id="confetti-popup" class="popup" style="display:none;">
+        <div class="popup-content">
+            <p class="confetti-message">Nhân viên của chúng tôi sẽ liên hệ với bạn sớm!</p>
+            <canvas id="confetti-canvas" width="320" height="180" style="display:block;margin:0 auto;"></canvas>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@flexenglish.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FlexEnglishCenter/photos" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@flex.english.cent" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Flex English. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Hidden Google Form for submission -->
+    <form id="hidden-google-form" action="https://docs.google.com/forms/d/e/1FAIpQLScj7VnLAPS0eDTVop_Lfd-C57BFsr40FFHNyElymAPF1-gz7Q/formResponse" method="POST" target="hidden_iframe" style="display:none;">
+      <input name="entry.269903121" id="hidden-class">
+      <input name="entry.653025264" id="hidden-name">
+      <input name="entry.2028446664" id="hidden-email">
+      <input name="entry.1891732511" id="hidden-phone">
+    </form>
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+    <script src="script.js"></script>
+    <script src="classes.js"></script>
+</body>
+</html> 

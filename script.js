@@ -133,13 +133,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Anchor scroll offset for fixed header (robust, with animation frame)
-window.addEventListener('DOMContentLoaded', function() {
+// Anchor scroll offset for fixed header (robust, with animation frame and hashchange)
+function scrollToAnchorWithOffset() {
   if (window.location.hash) {
     function scrollToAnchor() {
       var el = document.getElementById(window.location.hash.substring(1));
       if (el) {
-        var yOffset = window.innerWidth <= 500 ? -70 : -90;
+        var yOffset = window.innerWidth <= 500 ? -110 : -90;
         var y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({top: y, behavior: 'auto'});
       } else {
@@ -148,4 +148,6 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     scrollToAnchor();
   }
-}); 
+}
+window.addEventListener('DOMContentLoaded', scrollToAnchorWithOffset);
+window.addEventListener('hashchange', scrollToAnchorWithOffset); 

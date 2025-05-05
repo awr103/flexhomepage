@@ -859,13 +859,15 @@ footer {
 
 @media (max-width: 500px) {
     header {
-        border: none !important;
+        min-height: unset;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+        padding: 0;
     }
     nav {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 0.4rem 2vw 0.4rem 2vw;
-        gap: 0.2rem;
+        align-items: stretch;
+        padding: 0.3rem 2vw 0.3rem 2vw;
+        gap: 0.1rem;
     }
     .logo-social {
         display: flex;
@@ -873,27 +875,27 @@ footer {
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        gap: 0.5rem;
-        margin-bottom: 0.2rem;
+        gap: 0;
+        margin-bottom: 0.1rem;
     }
     .logo {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 2px;
-        margin-right: 0.5rem;
+        margin-right: 0;
         flex-shrink: 0;
-        min-width: 110px;
+        min-width: 100px;
     }
     .header-logo-img {
-        height: 44px;
+        height: 40px;
         margin-right: 2px;
     }
     .header-social-links {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 0.7rem;
+        gap: 0.5rem;
         margin-left: 0.5rem;
         margin-right: 0;
         position: static;
@@ -903,13 +905,13 @@ footer {
     .nav-right {
         flex-direction: column;
         align-items: stretch;
-        gap: 0.2rem;
+        gap: 0.1rem;
         width: 100%;
     }
     .language-switcher {
-        gap: 0.3rem;
-        margin-right: 0.5rem;
-        margin-bottom: 0.2rem;
+        gap: 0.2rem;
+        margin-right: 0.3rem;
+        margin-bottom: 0.1rem;
     }
     .lang-btn img {
         width: 18px;
@@ -917,10 +919,10 @@ footer {
     }
     nav ul {
         flex-direction: column;
-        gap: 0.2rem;
+        gap: 0.1rem;
         width: 100%;
         padding-left: 0;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.1rem;
     }
     nav ul li {
         width: 100%;
@@ -928,7 +930,7 @@ footer {
     }
     nav a {
         font-size: 1rem;
-        padding: 0.5rem 0.7rem;
+        padding: 0.4rem 0.7rem;
         display: block;
         width: 100%;
         box-sizing: border-box;
@@ -936,18 +938,10 @@ footer {
     .cta-button {
         display: block;
         width: 100%;
-        margin: 0.2rem 0 0.2rem 0;
+        margin: 0.1rem 0 0.1rem 0;
         font-size: 1rem;
-        padding: 0.7rem 0.7rem;
+        padding: 0.6rem 0.7rem;
         box-sizing: border-box;
-    }
-    /* Stack nav links and button into two lines */
-    .nav-right {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    nav ul {
-        margin-bottom: 0.2rem;
     }
 }
 

@@ -139,8 +139,9 @@ function scrollToAnchorWithOffset() {
     function scrollToAnchor() {
       var el = document.getElementById(window.location.hash.substring(1));
       if (el) {
-        var yOffset = window.innerWidth <= 500 ? -110 : -90;
+        var yOffset = window.innerWidth <= 500 ? -130 : -90;
         var y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        if (y < 10) y = 0; // fallback: scroll to top if anchor is at the very top
         window.scrollTo({top: y, behavior: 'auto'});
       } else {
         requestAnimationFrame(scrollToAnchor);

@@ -891,11 +891,16 @@ footer {
         margin-right: 2px;
         max-width: 48px;
     }
+    .header-logo-img:last-child {
+        height: 38px;
+        max-width: 80px;
+        margin-right: 0;
+    }
     .header-social-links {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.1rem;
         margin-left: 0.5rem;
         margin-right: 0;
         position: static;
@@ -975,6 +980,11 @@ html {
     .header-logo-img {
         height: 44px;
         margin-right: 2px;
+    }
+    .header-logo-img:last-child {
+        height: 38px;
+        max-width: 80px;
+        margin-right: 0;
     }
     .header-social-links {
         display: flex;

@@ -392,6 +392,13 @@ h2 {
     box-shadow: 0 4px 16px rgba(44,62,80,0.13);
     background: rgba(52,152,219,0.95);
 }
+@media (min-width: 900px) {
+    #test-btn-overlay {
+        left: 24px;
+        top: 2.5%;
+        transform: translate(0, 0);
+    }
+}
 .pulsate {
     animation: pulsate 1.2s infinite;
 }

@@ -861,6 +861,7 @@ footer {
     header {
         min-height: unset;
         box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+        border: 3px solid red !important;
     }
     nav {
         flex-direction: column;

@@ -869,33 +869,35 @@ footer {
         gap: 0.2rem;
     }
     .logo-social {
+        display: flex;
         flex-direction: row;
         align-items: center;
-        width: 100%;
-        margin-bottom: 0.2rem;
-        gap: 0.5rem;
         justify-content: flex-start;
+        width: 100%;
+        gap: 0.5rem;
+        margin-bottom: 0.2rem;
     }
     .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         gap: 2px;
         margin-right: 0.5rem;
         flex-shrink: 0;
-        display: flex;
-        align-items: center;
     }
     .header-logo-img {
         height: 44px;
         margin-right: 2px;
     }
     .header-social-links {
+        display: flex;
         flex-direction: row;
+        align-items: center;
         gap: 0.7rem;
-        font-size: 1.3rem;
         margin-left: 0.5rem;
         margin-right: 0;
-        justify-content: flex-start;
-        align-items: center;
         position: static;
+        font-size: 1.3rem;
     }
     .nav-right {
         flex-direction: column;
@@ -956,33 +958,35 @@ html {
         scroll-padding-top: 70px;
     }
     .logo-social {
+        display: flex;
         flex-direction: row;
         align-items: center;
-        width: 100%;
-        margin-bottom: 0.2rem;
-        gap: 0.5rem;
         justify-content: flex-start;
+        width: 100%;
+        gap: 0.5rem;
+        margin-bottom: 0.2rem;
     }
     .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         gap: 2px;
         margin-right: 0.5rem;
         flex-shrink: 0;
-        display: flex;
-        align-items: center;
     }
     .header-logo-img {
         height: 44px;
         margin-right: 2px;
     }
     .header-social-links {
+        display: flex;
         flex-direction: row;
+        align-items: center;
         gap: 0.7rem;
-        font-size: 1.3rem;
         margin-left: 0.5rem;
         margin-right: 0;
-        justify-content: flex-start;
-        align-items: center;
         position: static;
+        font-size: 1.3rem;
     }
     .nav-right {
         flex-direction: column;

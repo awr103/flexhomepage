@@ -131,4 +131,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         activeButton.classList.add('active');
     }
+});
+
+// Anchor scroll offset for fixed header
+window.addEventListener('DOMContentLoaded', function() {
+  if (window.location.hash) {
+    var el = document.getElementById(window.location.hash.substring(1));
+    if (el) {
+      var yOffset = window.innerWidth <= 500 ? -70 : -90;
+      var y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({top: y, behavior: 'auto'});
+    }
+  }
 }); 

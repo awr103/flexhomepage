@@ -394,7 +394,8 @@ h2 {
 }
 @media (min-width: 900px) {
     #test-btn-overlay {
-        left: 24px;
+        left: auto;
+        right: 24px;
         top: 2.5%;
         transform: translate(0, 0);
     }

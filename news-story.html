@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Story - Flex English</title>
+    <link rel="stylesheet" href="styles.css?v=202410">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .story-container {
+            max-width: 700px;
+            margin: 3rem auto 3rem auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(44,62,80,0.10);
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        .story-media {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        .story-media img, .story-media iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 12px;
+            display: block;
+        }
+        .story-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #222;
+            margin-bottom: 0.7rem;
+            line-height: 1.1;
+        }
+        .story-byline {
+            font-size: 1.1rem;
+            color: #888;
+            margin-bottom: 1.5rem;
+        }
+        .story-content {
+            font-size: 1.15rem;
+            color: #333;
+            line-height: 1.7;
+        }
+        .story-content p {
+            margin-bottom: 1.2em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #3498db;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .translate-btn {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.5rem 1.2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .translate-btn:hover {
+            background: #217dbb;
+        }
+        .story-video {
+            margin-top: 2.5rem;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #f8f9fa;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .story-video iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-social">
+                <div class="logo">
+                    <a href="index.html"><img src="images/flex1.png" alt="Flex Logo 1" class="header-logo-img"></a>
+                    <a href="index.html"><img src="images/flex2.png" alt="Flex Logo 2" class="header-logo-img"></a>
+                </div>
+                <div class="header-social-links">
+                    <a href="https://www.facebook.com/FlexEnglishCenter/photos" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@flex.english.cent" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                    </button>
+                    <button class="lang-btn" data-lang="vi">
+                        <img src="https://flagcdn.com/w20/vn.png" alt="Vietnamese">
+                    </button>
+                </div>
+                <ul>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#teachers">Our Teachers</a></li>
+                    <li><a href="classes.html">Our Classes</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="https://ptai-puce.vercel.app/" class="cta-button" target="_blank" rel="noopener">Take English Test</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="story-container">
+            <a href="news.html" class="back-link">&larr; Back to News</a>
+            <div class="story-title" id="storyTitle"></div>
+            <div class="story-byline" id="storyByline"></div>
+            <div class="story-media" id="storyMedia"></div>
+            <button class="translate-btn" id="translateBtn" style="display:none;">Tiếng Việt</button>
+            <div class="story-content" id="storyContent"></div>
+            <div class="story-video" id="storyVideo" style="display:none;"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content new-footer-layout">
+            <div class="footer-section contact-section">
+                <h3 data-i18n="footer.contact">Contact Us</h3>
+                <p>Email: <a href="mailto:thuy.le@flexenglish.edu.vn">thuy.le@flexenglish.edu.vn</a></p>
+                <p>Phone: 0703.010122</p>
+                <p>Address: D8 Đ. Mậu Thân, An Phú, Ninh Kiều, Cần Thơ 902072</p>
+            </div>
+            <div class="footer-section map-section">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.782904774211!2d105.7726526!3d10.034765499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0893b0ca8aa03%3A0x7f6ca6a145cf2f80!2sFlex%20English%20Center!5e0!3m2!1sen!2s!4v1746269482740!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer-section photo-section">
+                <img src="images/center.jpg" alt="Flex English Center" class="footer-center-photo" />
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="footer.follow">Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FlexEnglishCenter/photos" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@flex.english.cent" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Flex English. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        </div>
+    </footer>
+    <script src="news.js?v=202410"></script>
+    <script>
+    function getStoryId() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('id');
+    }
+    function renderStory() {
+        if (!window.newsItems) {
+            document.getElementById('storyTitle').textContent = 'Story Not Found';
+            return;
+        }
+        const id = getStoryId();
+        const story = window.newsItems.find(s => String(s.id) === String(id));
+        if (!story) {
+            document.getElementById('storyTitle').textContent = 'Story Not Found';
+            return;
+        }
+        document.getElementById('storyTitle').textContent = story.title;
+        document.getElementById('storyByline').textContent = 'By Flex English Staff | May 2025';
+        // Main image
+        if (story.mainMedia && story.mainMedia.type === 'image') {
+            document.getElementById('storyMedia').innerHTML = `<img src='${story.mainMedia.url}' alt='${story.title}'>`;
+        }
+        // Translation
+        const btn = document.getElementById('translateBtn');
+        const contentDiv = document.getElementById('storyContent');
+        let isVn = false;
+        if (story.content_vn && story.content_en) {
+            btn.style.display = '';
+            contentDiv.innerHTML = story.content_en;
+            btn.textContent = 'Tiếng Việt';
+            btn.onclick = function() {
+                isVn = !isVn;
+                contentDiv.innerHTML = isVn ? story.content_vn : story.content_en;
+                btn.textContent = isVn ? 'English' : 'Tiếng Việt';
+            };
+        } else {
+            btn.style.display = 'none';
+            contentDiv.innerHTML = story.content_en || story.content_vn || '';
+        }
+        // Video (if present)
+        const videoDiv = document.getElementById('storyVideo');
+        if (story.video) {
+            // Convert YouTube shorts or embed to embed format
+            let videoId = '';
+            if (story.video.includes('youtube.com/shorts/')) {
+                videoId = story.video.split('youtube.com/shorts/')[1].split('?')[0];
+            } else if (story.video.includes('youtube.com/embed/')) {
+                videoId = story.video.split('youtube.com/embed/')[1].split('?')[0];
+            }
+            if (videoId) {
+                videoDiv.innerHTML = `<iframe src='https://www.youtube.com/embed/${videoId}' frameborder='0' allowfullscreen></iframe>`;
+                videoDiv.style.display = '';
+            } else {
+                videoDiv.style.display = 'none';
+            }
+        } else {
+            videoDiv.style.display = 'none';
+        }
+    }
+    document.addEventListener('DOMContentLoaded', renderStory);
+    </script>
+</body>
+</html> 

@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         activeButton.classList.add('active');
     }
-});
+}); 
 
 // Anchor scroll offset for fixed header (robust, with animation frame and hashchange)
 function scrollToAnchorWithOffset() {

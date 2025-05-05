@@ -395,9 +395,11 @@ h2 {
 @media (min-width: 900px) {
     #test-btn-overlay {
         left: auto;
-        right: 24px;
-        top: 2.5%;
+        right: 32px;
+        top: 32px;
         transform: translate(0, 0);
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
     }
 }
 .pulsate {

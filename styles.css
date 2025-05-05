@@ -855,4 +855,74 @@ footer {
 }
 .header-logo-img:last-child {
     margin-right: 0;
+}
+
+@media (max-width: 500px) {
+    header {
+        min-height: unset;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.4rem 2vw 0.4rem 2vw;
+        gap: 0.2rem;
+    }
+    .logo-social {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        margin-bottom: 0.2rem;
+    }
+    .logo {
+        gap: 2px;
+        margin-right: 0.5rem;
+    }
+    .header-logo-img {
+        height: 48px;
+        margin-right: 4px;
+    }
+    .header-social-links {
+        gap: 0.7rem;
+        font-size: 1.3rem;
+        margin-left: 0.2rem;
+    }
+    .nav-right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+        width: 100%;
+    }
+    .language-switcher {
+        gap: 0.3rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0.2rem;
+    }
+    .lang-btn img {
+        width: 18px;
+        height: 12px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0.2rem;
+        width: 100%;
+        padding-left: 0;
+    }
+    nav ul li {
+        width: 100%;
+        text-align: left;
+    }
+    nav a, .cta-button {
+        font-size: 1rem;
+        padding: 0.5rem 0.7rem;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .cta-button {
+        margin: 0.3rem 0 0.2rem 0;
+        font-size: 1rem;
+        padding: 0.7rem 0.7rem;
+    }
 } 
